@@ -29,7 +29,7 @@ class _LanuchScreenState extends State<LanuchScreen> {
         ),
       ),
       child: Center(
-        child: Image.asset('assets/images/logo.png'),
+        child: Image.asset('assets/images/logo_white.png'),
       ),
     );
   }

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:rika/onbording/onbording_screen.dart';
 import 'package:rika/screens/lanush_screen.dart';
+import 'package:rika/screens/login_screen.dart';
+import 'package:rika/screens/signup_screen.dart';
+import 'package:rika/screens/splash_screen.dart';
+import 'package:rika/screens/successfull_login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +25,11 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/lanuch_screen',
       routes: {
         '/lanuch_screen': (context) => const LanuchScreen(),
-        '/onbording_screen': (context) => const  Onbording(),
+        '/onbording_screen': (context) => const Onbording(),
+        '/splash_screen': (context) => const SplashScreen(),
+        '/login_screen': (context) => const LogInScreen(),
+        '/signup_screen': (context) => const SignUp(),
+        '/successful_screen': (context) => const Successfull(),
       },
     );
   }

@@ -67,14 +67,20 @@ class _OnbordingState extends State<Onbording> {
                   effect: const ExpandingDotsEffect(
                     dotColor: Color.fromARGB(255, 221, 221, 221),
                     activeDotColor: Color.fromARGB(255, 0, 0, 0),
+                    dotHeight: 7,
+                    dotWidth: 7,
                   ),
                   onDotClicked: (index) {},
                 ),
                 const Spacer(),
+                //contanier
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/splash_screen');
+                  },
                   icon: SvgPicture.asset(
-                    arrow,
+                    'assets/svgs/arrow.svg',
+                    width: 100,
                   ),
                 ),
               ],
