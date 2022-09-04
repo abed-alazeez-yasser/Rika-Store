@@ -154,9 +154,7 @@ class _LogInScreenState extends State<LogInScreen> {
                       borderRadius: BorderRadius.circular(25),
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/');
-                  },
+                  onPressed: () {},
                   child: RichText(
                     text: const TextSpan(children: [
                       WidgetSpan(
