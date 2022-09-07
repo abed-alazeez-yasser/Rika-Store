@@ -60,7 +60,7 @@ class _SuccessfullState extends State<Successfull> {
                   // side: const BorderSide(color: Colors.white),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login_screen');
+                  Navigator.pushNamed(context, '/main_screen');
                 },
                 child: const Text(
                   'Start Shopping',
