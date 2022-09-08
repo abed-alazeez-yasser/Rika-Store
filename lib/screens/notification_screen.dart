@@ -73,6 +73,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       child: Column(
                         children: [
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater1.png'),
                               mainTitle: 'Kristine Jones',
@@ -81,6 +82,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater2.png'),
                               mainTitle: 'Kristine Jones',
@@ -89,6 +91,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater3.png'),
                               mainTitle: 'Kristine Jones',
@@ -97,6 +100,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater4.png'),
                               mainTitle: 'Kristine Jones',
@@ -105,6 +109,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater1.png'),
                               mainTitle: 'Kristine Jones',
@@ -113,6 +118,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater2.png'),
                               mainTitle: 'Kristine Jones',
@@ -121,6 +127,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater3.png'),
                               mainTitle: 'Kristine Jones',
@@ -129,6 +136,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater4.png'),
                               mainTitle: 'Kristine Jones',
@@ -137,6 +145,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater1.png'),
                               mainTitle: 'Kristine Jones',
@@ -145,6 +154,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater2.png'),
                               mainTitle: 'Kristine Jones',
@@ -153,6 +163,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                   ' It is a long established\nthat a reader will be distracted by the\nreadable content of a page.'),
                           const Divider(),
                           NotificationCards(
+                              trailing: '',
                               avater:
                                   Image.asset('assets/images/img_avater3.png'),
                               mainTitle: 'Kristine Jones',

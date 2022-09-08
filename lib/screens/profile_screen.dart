@@ -33,7 +33,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Navigator.pushNamed(
                                     context, '/successful_screen');
                               },
-                              icon: SvgPicture.asset('assets/svgs/arrow.svg')),
+                              icon: SvgPicture.asset(
+                                  'assets/svgs/arrow_left.svg')),
                         ),
                         const Spacer(),
                         Align(

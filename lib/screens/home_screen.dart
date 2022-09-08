@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: () {
                           Navigator.pushNamed(context, '/successful_screen');
                         },
-                        icon: SvgPicture.asset('assets/svgs/arrow.svg')),
+                        icon: SvgPicture.asset('assets/svgs/arrow_left.svg')),
                   ),
                   const SizedBox(
                     height: 20,

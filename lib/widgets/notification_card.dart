@@ -5,13 +5,17 @@ class NotificationCards extends StatelessWidget {
   final String mainTitle;
   final String titleBody;
   final String subTitle;
+  final String trailing;
 
-  const NotificationCards({
+  const NotificationCards(
+      // this.trailing,
+      {
     Key? key,
     required this.avater,
     required this.mainTitle,
     required this.titleBody,
     required this.subTitle,
+    required this.trailing,
   }) : super(key: key);
 
   @override
@@ -40,6 +44,10 @@ class NotificationCards extends StatelessWidget {
         subTitle,
         style: const TextStyle(
             fontSize: 10, color: Color.fromARGB(255, 170, 170, 170)),
+      ),
+      trailing: Text(
+        trailing,
+        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
       ),
     );
   }
