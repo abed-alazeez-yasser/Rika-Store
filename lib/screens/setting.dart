@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rika/widgets/form_setting.dart';
 
 class SettingScreen extends StatelessWidget {
