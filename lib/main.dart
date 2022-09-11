@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:rika/onbording/onbording_screen.dart';
+import 'package:rika/screens/chat_detail_screen.dart';
 import 'package:rika/screens/lanush_screen.dart';
 import 'package:rika/screens/login_screen.dart';
 import 'package:rika/screens/main_screen.dart';
+import 'package:rika/screens/messages_list_screen.dart';
 import 'package:rika/screens/setting.dart';
 import 'package:rika/screens/signup_screen.dart';
 import 'package:rika/screens/splash_screen.dart';
@@ -34,6 +36,8 @@ class _MyAppState extends State<MyApp> {
         '/successful_screen': (context) => const Successfull(),
         '/main_screen': (context) => const MainScreen(),
         '/setting_screen': (context) => const SettingScreen(),
+        '/chat_screen': (context) =>const ChatDetailPage(),
+        '/messege_list_screen': (context) =>const HomePage(),
       },
     );
   }

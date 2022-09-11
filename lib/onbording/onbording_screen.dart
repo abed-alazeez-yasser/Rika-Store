@@ -32,7 +32,6 @@ class _OnbordingState extends State<Onbording> {
               onPageChanged: (index) {
                 setState(() {
                   i = index;
-                  debugPrint('$index');
                 });
               },
               children: [

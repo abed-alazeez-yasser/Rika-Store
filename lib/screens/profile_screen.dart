@@ -31,7 +31,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           child: IconButton(
                               onPressed: () {
                                 Navigator.pushNamed(
-                                    context, '/successful_screen');
+                                    context, '/messege_list_screen');
                               },
                               icon: SvgPicture.asset(
                                   'assets/svgs/arrow_left.svg')),
