@@ -16,12 +16,8 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: getBody(),
-      body: ListView(
-        children: [
-          // header(),
-          getBody(),
-        ],
+      body: Column(
+        children: [header()],
       ),
     );
   }
@@ -29,9 +25,10 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   Widget header() {
     return Padding(
       padding: const EdgeInsets.all(15),
-      child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
+      child: ListView(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          children: [
             const SizedBox(
               height: 20,
             ),
@@ -67,7 +64,11 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                 title: const Text('Hasan Mahmud'),
                 subtitle: const Text('rikafashionshop@gmail.com'),
               ),
-            )
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            getBody(),
           ]),
     );
   }
@@ -134,7 +135,11 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
 
   Widget getBody() {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 100),
+      padding: const EdgeInsets.only(
+        top: 20,
+        left: 10,
+        right: 10,
+      ),
       child: Card(
         elevation: 0,
         child: ListView(
