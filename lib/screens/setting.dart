@@ -7,14 +7,35 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String _selectedMode = 'E';
-
+    
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             const SizedBox(
-              height: 50,
+              height: 25,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: Container(
+                  width: 75,
+                  height: 75,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image:
+                            ExactAssetImage('assets/images/Rectangle 74.png'),
+                      )),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
             ),
             const FormSetting(
               label: 'Name',
@@ -32,7 +53,7 @@ class SettingScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 SizedBox(
-                  width: 130,
+                  width: 120,
                   child: RadioListTile(
                     title: const Text(
                       'Male',
@@ -40,7 +61,9 @@ class SettingScreen extends StatelessWidget {
                     ),
                     value: 'E',
                     groupValue: _selectedMode,
-                    onChanged: (value) => {},
+                    onChanged: (val) {
+                      
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                       side: const BorderSide(color: Colors.black),
@@ -65,6 +88,7 @@ class SettingScreen extends StatelessWidget {
                 ),
               ],
             ),
+            
             const FormSetting(
               label: 'Age',
               textField: '22 Year',
@@ -85,7 +109,7 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 16,
             ),
             Card(
               shape: RoundedRectangleBorder(
@@ -101,8 +125,12 @@ class SettingScreen extends StatelessWidget {
                   children: [
                     ListTile(
                       leading: Image.asset('assets/images/bag.png'),
-                      title: const Text('Personal Details'),
+                      title: const Text('Language'),
                       trailing: Image.asset('assets/images/arrow1.png'),
+                      onTap: () => {
+                        Navigator.pushNamed(context, '/language_screen'),
+                        debugPrint("Card tapped."),
+                      },
                     ),
                     ListTile(
                       leading: const Icon(
@@ -139,11 +167,11 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 16,
             ),
             SizedBox(
               width: double.infinity,
-              height: 50,
+              height: 40,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 0,
@@ -151,7 +179,6 @@ class SettingScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
-                  // side: const BorderSide(color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, '/successful_screen');

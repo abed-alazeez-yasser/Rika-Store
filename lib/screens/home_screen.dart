@@ -54,8 +54,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                       children: <Widget>[
+                        // Container(
+                        //   child: Stack(
+                        //     children: [
+                        //       SvgPicture.asset('assets/images/Rectangle 14.png'),
+                        //       Container(
+
+                        //       ),
+
+                        //     ],
+                        //   ),
+                        // ),
                         CategoryCard(
-                          title: "New Arrivals ",
+                          title: 'New Arrivals ',
                           SubTitle: '208 Product',
                           svgSrc: "assets/images/Rectangle 14.png",
                           press: () {},

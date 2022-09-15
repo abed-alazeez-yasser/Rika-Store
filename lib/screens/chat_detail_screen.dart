@@ -16,146 +16,220 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [header()],
-      ),
+      body: header(),
+      bottomNavigationBar: getBottom(),
     );
   }
 
   Widget header() {
     return Padding(
-      padding: const EdgeInsets.all(15),
-      child: ListView(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+      padding: const EdgeInsets.all(10),
+      child: Column(children: [
+        const SizedBox(
+          height: 20,
+        ),
+        Row(
           children: [
-            const SizedBox(
-              height: 20,
+            Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/messege_list_screen');
+                  },
+                  icon: SvgPicture.asset('assets/svgs/arrow_left.svg')),
             ),
-            Row(
-              children: [
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/messege_list_screen');
-                      },
-                      icon: SvgPicture.asset('assets/svgs/arrow_left.svg')),
-                ),
-                const Spacer(),
-                Align(
-                  alignment: AlignmentDirectional.centerEnd,
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/setting_screen');
-                    },
-                    icon: Image.asset('assets/images/settings.png'),
+            const Spacer(),
+            Align(
+              alignment: AlignmentDirectional.centerEnd,
+              child: Row(
+                children: [
+                  SvgPicture.asset('assets/svgs/notification.svg'),
+                  const SizedBox(
+                    width: 20,
                   ),
+                  SvgPicture.asset('assets/svgs/dots.svg'),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+          elevation: 6,
+          child: ListTile(
+            leading: Container(
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                      color: const Color.fromARGB(255, 2, 188, 73), width: 3)),
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: Container(
+                  width: 75,
+                  height: 75,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image:
+                            ExactAssetImage('assets/images/Rectangle 74.png'),
+                      )),
                 ),
-              ],
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              elevation: 16,
-              child: ListTile(
-                leading: Image.asset('assets/images/Rectangle 74.png'),
-                title: const Text('Hasan Mahmud'),
-                subtitle: const Text('rikafashionshop@gmail.com'),
               ),
             ),
-            const SizedBox(
-              height: 10,
+            title: const Text(
+              'Kristine Jones',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
             ),
-            getBody(),
-          ]),
+            subtitle: const Text(
+              'Online',
+              style: TextStyle(
+                color: Color.fromARGB(255, 2, 188, 73),
+                fontSize: 11,
+              ),
+            ),
+            trailing: Container(
+              width: 80,
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  SvgPicture.asset('assets/svgs/audio.svg'),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  SvgPicture.asset('assets/svgs/video.svg'),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        getBody(),
+      ]),
     );
   }
 
   Widget getBottom() {
-    return Positioned(
-      bottom: 10,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-        child: Container(
-          height: 80,
-          width: double.infinity,
-          decoration: BoxDecoration(color: grey.withOpacity(0.2)),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                SizedBox(
-                  width: (MediaQuery.of(context).size.width - 40) / 2,
-                  child: Row(
-                    children: const <Widget>[],
-                  ),
+    return Padding(
+      padding: const EdgeInsets.only(
+        bottom: 26,
+        left: 20,
+        right: 20,
+      ),
+      child: Container(
+        width: double.infinity,
+        height: 50,
+        // color: Colors.amber,
+        child: Row(
+          children: [
+            Container(
+              width: (MediaQuery.of(context).size.width) - 100,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: const Color.fromARGB(255, 204, 204, 204),
                 ),
-                Container(
-                  width: (MediaQuery.of(context).size.width - 40) / 2,
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        width: (MediaQuery.of(context).size.width - 140) / 2,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            color: grey,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 12),
-                          child: TextField(
-                            cursorColor: black,
-                            controller: _sendMessageController,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Aa",
-                              suffixIcon: SvgPicture.asset(
-                                  'assets/svgs/cemera.svg',
-                                  width: 30),
-                            ),
+              ),
+              child: TextField(
+                cursorColor: black,
+                decoration: InputDecoration(
+                    prefixIcon: Container(
+                      width: 70,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          const SizedBox(
+                            width: 10,
                           ),
-                        ),
+                          SvgPicture.asset('assets/svgs/cemera.svg'),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          const VerticalDivider(
+                            endIndent: 5,
+                            indent: 5,
+                            color: Color.fromARGB(255, 221, 221, 221),
+                            thickness: 2,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                        ],
                       ),
-                      const SizedBox(
-                        width: 10,
+                    ),
+                    suffixIcon: Container(
+                      width: 60,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SvgPicture.asset('assets/svgs/microphone.svg'),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          SvgPicture.asset('assets/svgs/link.svg'),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                        ],
                       ),
-                      SvgPicture.asset('assets/svgs/send.svg', width: 40),
-                    ],
-                  ),
-                ),
-              ],
+                    ),
+                    hintText: 'Type message...',
+                    border: InputBorder.none),
+              ),
             ),
-          ),
+            const SizedBox(
+              width: 10,
+            ),
+            SvgPicture.asset('assets/svgs/send.svg', width: 40),
+          ],
         ),
       ),
     );
   }
 
   Widget getBody() {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 20,
-        left: 10,
-        right: 10,
-      ),
-      child: Card(
-        elevation: 0,
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
-          padding:
-              const EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 80),
-          children: List.generate(messages.length, (index) {
-            return ChatBubble(
-                isMe: messages[index]['isMe'],
-                messageType: messages[index]['messageType'],
-                message: messages[index]['message'],
-                profileImg: messages[index]['profileImg']);
-          }),
+    return Container(
+      height: 450,
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 20,
+          left: 10,
+          right: 10,
+        ),
+        child: Card(
+          elevation: 0,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            padding:
+                const EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 80),
+            children: List.generate(messages.length, (index) {
+              return ChatBubble(
+                  isMe: messages[index]['isMe'],
+                  messageType: messages[index]['messageType'],
+                  message: messages[index]['message'],
+                  profileImg: messages[index]['profileImg']);
+            }),
+          ),
         ),
       ),
     );
   }
 }
+

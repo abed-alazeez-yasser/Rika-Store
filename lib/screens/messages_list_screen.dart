@@ -60,7 +60,6 @@ class _HomePageState extends State<HomePage> {
           ),
           child: TextField(
             cursorColor: black,
-            controller: _searchController,
             decoration: InputDecoration(
                 prefixIcon: Icon(
                   LineIcons.search,
