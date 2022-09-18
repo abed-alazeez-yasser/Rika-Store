@@ -6,6 +6,8 @@ import 'package:rika/screens/lanush_screen.dart';
 import 'package:rika/screens/login_screen.dart';
 import 'package:rika/screens/main_screen.dart';
 import 'package:rika/screens/messages_list_screen.dart';
+import 'package:rika/screens/payment_confirm_screen.dart';
+import 'package:rika/screens/payment_mathod_screen.dart';
 import 'package:rika/screens/setting.dart';
 import 'package:rika/screens/signup_screen.dart';
 import 'package:rika/screens/splash_screen.dart';
@@ -40,6 +42,8 @@ class _MyAppState extends State<MyApp> {
         '/chat_screen': (context) => const ChatDetailPage(),
         '/messege_list_screen': (context) => const HomePage(),
         '/language_screen': (context) => const LanguageScreen(),
+        '/pay_method_screen': (context) => const PaymentMethod(),
+        '/pay_confarim_screen': (context) => const PayementConfirm(),
       },
     );
   }

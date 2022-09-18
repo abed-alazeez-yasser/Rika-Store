@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.only(right: 20),
                   child: Column(
                     children: <Widget>[
-                      Container(
+                      SizedBox(
                         width: 70,
                         height: 70,
                         child: Stack(
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Row(
                   children: <Widget>[
-                    Container(
+                    SizedBox(
                       width: 75,
                       height: 75,
                       child: Stack(

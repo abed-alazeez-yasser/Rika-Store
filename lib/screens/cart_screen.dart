@@ -100,13 +100,14 @@ class _CartScreenState extends State<CartScreen>
                           child: Column(
                             children: [
                               NotificationCards(
-                                  trailing: '\$198.00',
-                                  avater: Image.asset(
-                                      'assets/images/image_order.png'),
-                                  mainTitle: 'Kristine Jones',
-                                  subTitle: '',
-                                  titleBody:
-                                      ''' \n Vado Odelle Dress\n Quality: 1\n Size: L\n Color: '''),
+                                trailing: '\$198.00',
+                                avater: Image.asset(
+                                    'assets/images/image_order.png'),
+                                mainTitle: 'Kristine Jones',
+                                subTitle: '',
+                                titleBody:
+                                    ''' \n Vado Odelle Dress\n Quality: 1\n Size: L\n Color: ''',
+                              ),
                               NotificationCards(
                                   trailing: '\$245.00',
                                   avater: Image.asset(

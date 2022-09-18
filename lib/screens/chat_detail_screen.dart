@@ -92,7 +92,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                 fontSize: 11,
               ),
             ),
-            trailing: Container(
+            trailing: SizedBox(
               width: 80,
               child: Row(
                 children: [
@@ -130,7 +130,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         left: 20,
         right: 20,
       ),
-      child: Container(
+      child: SizedBox(
         width: double.infinity,
         height: 50,
         // color: Colors.amber,
@@ -149,7 +149,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
               child: TextField(
                 cursorColor: black,
                 decoration: InputDecoration(
-                    prefixIcon: Container(
+                    prefixIcon: SizedBox(
                       width: 70,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -173,7 +173,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                         ],
                       ),
                     ),
-                    suffixIcon: Container(
+                    suffixIcon: SizedBox(
                       width: 60,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -204,7 +204,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   }
 
   Widget getBody() {
-    return Container(
+    return SizedBox(
       height: 450,
       child: Padding(
         padding: const EdgeInsets.only(

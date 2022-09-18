@@ -75,16 +75,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
         const SizedBox(
           height: 16,
         ),
-        // AppCard(
-        //   title: const Text('English'),
-        //   value: '1',
-        //   image: Image.asset('assets/images/UK.png'),
-        //   onChanged: (value) {
-        //     setState(() {
-        //       level = value.toString();
-        //     });
-        //   },
-        // ),
         AppCard(
           title: const Text('English'),
           value: '2',
@@ -103,6 +93,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
           child: RadioListTile(
             groupValue: level,
             onChanged: (value) {
+              Navigator.pushNamed(context, '/pay_method_screen');
               setState(() {
                 level = value.toString();
               });
